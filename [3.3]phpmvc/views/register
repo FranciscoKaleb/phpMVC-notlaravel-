@@ -1,0 +1,184 @@
+<!-- views/login.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+</head>
+<body id = "body" style = "overflow-y: scroll;">
+    
+    <div id = 'log_in_signup_page_background2'>
+
+        <div id = 'log_in_signup2'>
+            
+            <div  id = 'form2'>
+
+                    <p id = 'test3' style = 'display:none;'>
+
+                    </p>
+                    <p id = 'test4' style = 'display:none;'>
+
+                    </p>
+                    <p id = 'test5' style = 'display:none;'>
+
+                    </p>
+                    <div class='form-group2' style='margin-bottom:20px'>
+                        <h2>User Registration Formm</h2>
+                    </div>
+
+
+                    <div class='form-group2' style='margin-bottom:20px; align-items:center;'>
+                        <h3>Basic Information</h3>
+                    </div>
+
+
+                    <div class='form-group2'>
+                        <label for='ip_address' style = 'display:none;'>ip_address</label >
+                        <input type='text' id='ip_address' name='ip_address' style = 'display:none;' required>
+                    </div>
+
+                    <div class = 'form-group2-container'>
+                        
+
+                        <div class='form-group2'>
+                            <label for='first_name'>First Name:</label>
+                            <input type='text' id='first_name' name='first_name' required>
+                        </div>
+                
+                        <div class='form-group2'>
+                            <label for='last_name'>Last Name:</label>
+                            <input type='text' id='last_name' name='last_name' required>
+                        </div>
+
+                        <div class='form-group2'>
+                            <label for='middle_name'>Middle Name:</label>
+                            <input type='text' id='middle_name' name='middle_name' required>
+                        </div>
+                 
+                        <div class='form-group2'>
+                            <label for='birthday'>Birthday:</label>
+                            <input type='date' id='birthday' name='birthday' required>
+                        </div>    
+                        <div class='form-group2'>
+                        <label for='gender'>Sex</label>
+
+                        <select id='gender' name='gender' required>
+                            <option>male</option>
+                            <option>female</option>
+                        </select>
+                    </div>
+
+                    </div>
+
+                    <div class='form-group2' style='margin-bottom:20px; align-items:center;'>
+                        <h3>Address</h3>
+                    </div>
+
+                    <div class = 'form-group2-container'>
+                    <div class='form-group2'>
+                        <label for='region'>Region</label>
+
+                        <select id='region' name='region'  onchange = 'getProvince()' required>
+
+                        </select>
+
+                        </div>
+
+                        <div class='form-group2'>
+                            <label for='province' >Province</label>
+
+                            <select id='province' name='province'  onchange = 'updateProvCodeAndgetMunicipalities()' required>
+                                
+                            </select>
+                        </div>
+
+                        <div class='form-group2'>
+                            <label for='municipality'>Municipality/City</label>
+
+                            <select id='municipality' name='municipality'  onchange = 'updateMunCodeAndGetBrgy()' required>
+                                
+                            </select>
+                        </div>
+
+                        <div class='form-group2'>
+                            <label for='brgy'>Barangay</label>
+                            <select id='brgy' name='brgy'  onchange = 'updateBrgyCode()' required>
+                                
+                            </select>
+                        </div>
+
+                        <div class='form-group2' style = 'width:70%'>
+                            <label for='first_name'>Address </label>
+                            <textarea type='text' id='address_string' name='first_name' rows = '2' required>
+                            </textarea>
+                        </div>
+
+                    </div>
+
+
+                    <div class='form-group2' style='margin-bottom:20px; align-items:center;'>
+                        <h3>Contact</h3>
+                    </div>
+
+                    <div class = 'form-group2-container'>
+
+                        <div class='form-group2'>
+                            <label for='email'>Email:</label>
+                            <input type='email' id='email' name='email' required>
+                        </div>   
+
+                        <div class='form-group2'>
+                            <label id = 'test2' for='phone_number' >Phone Number:</label>
+                            <input type='text' id='phone_number' maxlength = '11' value = '' name='phone_number' required>
+
+                        </div>
+
+                    </div>
+
+                    <div class='form-group2' style='margin-bottom:20px; align-items:center;'>
+                        <h3>Log in credentials</h3>
+                    </div>
+
+                    <div class = 'form-group2-container'>
+
+                        <div class='form-group2'>
+                            <label for='first_name'>username</label>
+                            <input type='text' id='user_name' name='user_name' required>
+                        </div>
+                
+                        <div class='form-group2'>
+                            <label for='last_name'>password</label>
+                            <input type='password' id='password' name='password' minlength='8' required>
+                        </div>
+
+                    </div>
+            
+
+                    
+
+                    <div class = 'form-group2' style = 'flex-direction: column; align-items: center;padding-bottom: 50px;'>
+                        <button onclick = 'submitData()'>
+                            Submit
+                        </button>
+                    </div>
+
+                    <div class = 'form-group2' style = 'flex-direction: column; align-items: center;padding-bottom: 50px;'>
+                        <a href = '/login'>sign in</a>
+                    </div> 
+
+                    <div id = 'testp'>
+                    </div>
+
+                </div>
+        </div>
+           
+    </div>
+    
+    <link rel="stylesheet" href="../styles/myStyle.css">
+
+    <script src="../scripts/register.js"></script>
+</body>
+</html>

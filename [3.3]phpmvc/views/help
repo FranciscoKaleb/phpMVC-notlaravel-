@@ -1,0 +1,25 @@
+<!-- views/index.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles/myStyle.css">
+    <script src="../scripts/lib/jquery.js"></script>
+    <!--<script src="../scripts/main.js"></script>-->
+</head>
+<body>
+    <div id="content">
+        <!-- Dynamic content will be loaded here -->
+        This is the help page where we will do our best to help you with your needs
+        <a href="/">main page</a>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+    <script>
+        sayHi();
+    </script>
+</body>
+</html>
